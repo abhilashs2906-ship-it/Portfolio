@@ -26,6 +26,9 @@ import {
 } from '@mui/material';
 import dsc from './assets/dsc.jpg';
 
+const LINKEDIN_PROFILE_URL = 'https://www.linkedin.com/in/abhilash-srinivasan-3b7762447';
+const GITHUB_PROFILE_URL = 'https://github.com/abhilashs2906-ship-it';
+
 // ============================================================================
 // 1. PORTFOLIO PROJECTS DATA (With Detailed Modal Info)
 // ============================================================================
@@ -45,7 +48,7 @@ const initialProjects = [
     image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=900&q=80',
     tags: ['React', 'Material UI', 'Flexbox'],
     liveLink: 'https://vercel.com',
-    githubLink: 'https://github.com'
+    githubLink: GITHUB_PROFILE_URL
   },
   {
     id: 2,
@@ -62,7 +65,7 @@ const initialProjects = [
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80',
     tags: ['HTML5', 'CSS Grid', 'Responsive UI'],
     liveLink: 'https://vercel.com',
-    githubLink: 'https://github.com'
+    githubLink: GITHUB_PROFILE_URL
   },
   {
     id: 3,
@@ -79,7 +82,7 @@ const initialProjects = [
     image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=900&q=80',
     tags: ['JavaScript ES6+', 'React State', 'MUI'],
     liveLink: 'https://vercel.com',
-    githubLink: 'https://github.com'
+    githubLink: GITHUB_PROFILE_URL
   },
   {
     id: 4,
@@ -96,7 +99,7 @@ const initialProjects = [
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80',
     tags: ['React', 'Vite', 'MUI Theme'],
     liveLink: 'https://vercel.com',
-    githubLink: 'https://github.com'
+    githubLink: GITHUB_PROFILE_URL
   }
 ];
 
@@ -381,6 +384,36 @@ export default function App() {
             >
               View My Timeline
             </Button>
+            <Button
+              variant="outlined"
+              size="large"
+              href={LINKEDIN_PROFILE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                textTransform: 'none',
+                px: 3.5,
+                py: 1.3,
+                fontWeight: 'bold'
+              }}
+            >
+              Connect on LinkedIn ↗
+            </Button>
+            <Button
+              variant="outlined"
+              size="large"
+              href={GITHUB_PROFILE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                textTransform: 'none',
+                px: 3.5,
+                py: 1.3,
+                fontWeight: 'bold'
+              }}
+            >
+              View GitHub ↗
+            </Button>
           </Stack>
         </Container>
       </Box>
@@ -594,6 +627,7 @@ export default function App() {
                   variant="outlined"
                   href={activeProject.githubLink}
                   target="_blank"
+                  rel="noopener noreferrer"
                   sx={{ textTransform: 'none', fontWeight: 'bold' }}
                 >
                   GitHub Code
@@ -602,6 +636,7 @@ export default function App() {
                   variant="contained"
                   href={activeProject.liveLink}
                   target="_blank"
+                  rel="noopener noreferrer"
                   sx={{
                     background: 'linear-gradient(135deg, #9f1239 0%, #e11d48 100%)',
                     color: '#ffffff',
@@ -814,7 +849,7 @@ export default function App() {
 
             <Stack spacing={2.5} sx={{ justifyContent: 'center' }}>
               <Typography variant="body1" fontWeight="500">
-                ✉️ abhilash@example.com
+                ✉️ abhilashs2906@gmail.com
               </Typography>
               <Typography variant="body1" fontWeight="500">
                 📍 Based in Chennai, India
@@ -823,8 +858,9 @@ export default function App() {
                 <Button
                   variant="outlined"
                   size="small"
-                  href="https://linkedin.com"
+                  href={LINKEDIN_PROFILE_URL}
                   target="_blank"
+                  rel="noopener noreferrer"
                   sx={{ fontWeight: 'bold', textTransform: 'none' }}
                 >
                   LinkedIn Profile
@@ -832,8 +868,9 @@ export default function App() {
                 <Button
                   variant="outlined"
                   size="small"
-                  href="https://github.com"
+                  href={GITHUB_PROFILE_URL}
                   target="_blank"
+                  rel="noopener noreferrer"
                   sx={{ fontWeight: 'bold', textTransform: 'none' }}
                 >
                   GitHub Repositories
